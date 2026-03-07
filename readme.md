@@ -35,7 +35,7 @@ A full-stack MERN house rental platform where renters can discover and book prop
 ## Project Structure
 
 ```text
-Nitin/
+HomeHunt/
 |- README.md
 |- Backend/
 |  |- index.js
