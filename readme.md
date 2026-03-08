@@ -35,7 +35,7 @@ A full-stack MERN house rental platform where renters can discover and book prop
 ## Project Structure
 
 ```text
-Nitin/
+HomeHunt/
 |- README.md
 |- Backend/
 |  |- index.js
@@ -110,7 +110,7 @@ npm install
 Backend (`Backend/.env`):
 
 ```env
-MONGO_DB=mongodb+srv://jhanitin16_db_user:sVXfJT3roZ2Y9TxX@houserent.k7pbuii.mongodb.net/houserent
+MONGO_DB=your_mongodb_connection_string
 JWT_KEY=your_jwt_secret_key
 PORT=8001
 FRONTEND_URL=http://localhost:5173
