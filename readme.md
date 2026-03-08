@@ -37,7 +37,7 @@ A full-stack MERN house rental platform where renters can discover and book prop
 ```text
 HomeHunt/
 |- README.md
-|- Backend/
+|- Server/
 |  |- index.js
 |  |- package.json
 |  |- .env
@@ -59,7 +59,7 @@ HomeHunt/
 |  |  |- userRoutes.js
 |  |- uploads/
 |
-|- Frontend/
+|- Client/
    |- package.json
    |- vite.config.js
    |- index.html
@@ -95,11 +95,11 @@ git clone https://github.com/Nkj-718/HomeHunt.git
 cd HomeHunt
 
 # Install backend dependencies
-cd Backend
+cd Server
 npm install
 
 # Install frontend dependencies
-cd ../Frontend
+cd ../Client
 npm install
 ```
 
@@ -107,7 +107,7 @@ npm install
 
 ### 2. Configure Environment Variables
 
-Backend (`Backend/.env`):
+Server (`Server/.env`):
 
 ```env
 MONGO_DB=your_mongodb_connection_string
@@ -117,7 +117,7 @@ FRONTEND_URL=http://localhost:5173
 FRONTEND_ORIGIN=http://127.0.0.1:5173
 ```
 
-Frontend (`Frontend/.env`) - optional for deployed mode:
+Client (`Client/.env`) - optional for deployed mode:
 
 ```env
 VITE_API_URL=http://localhost:8001
@@ -132,12 +132,12 @@ Notes:
 ### 3. Run Development Servers
 
 ```bash
-# Terminal 1 - Backend
-cd Backend
+# Terminal 1 - Server
+cd Server
 npm start
 
-# Terminal 2 - Frontend
-cd Frontend
+# Terminal 2 - Client
+cd Client
 npm run dev
 ```
 
@@ -235,12 +235,12 @@ propertyId/propertId, ownerID, userID, userName, phone, bookingStatus
 
 ## Available Scripts
 
-### Backend (`Backend/package.json`)
+### Server (`Server/package.json`)
 
 - `npm start` - run backend using nodemon
 - `npm test` - placeholder test script
 
-### Frontend (`Frontend/package.json`)
+### Client (`Client/package.json`)
 
 - `npm run dev` - start Vite dev server
 - `npm run build` - create production build
@@ -251,10 +251,10 @@ propertyId/propertId, ownerID, userID, userName, phone, bookingStatus
 
 ## Troubleshooting
 
-- If backend fails to start, confirm `.env` exists in `Backend/` and `MONGO_DB` is valid.
+- If backend fails to start, confirm `.env` exists in `Server/` and `MONGO_DB` is valid.
 - If frontend cannot call APIs, verify backend is running on `8001` and CORS origins match.
-- On Windows, folder names are case-sensitive in commands here; use exactly `Backend` and `Frontend`.
-- If images do not render, ensure files exist under `Backend/uploads` and backend static route is active.
+- On Windows, folder names are case-sensitive in commands here; use exactly `Server` and `Client`.
+- If images do not render, ensure files exist under `Server/uploads` and backend static route is active.
 
 ---
 
@@ -262,13 +262,13 @@ propertyId/propertId, ownerID, userID, userName, phone, bookingStatus
 
 ### Backend
 
-- Deploy `Backend/` to any Node hosting (Render, Railway, EC2, VPS)
-- Set environment variables from `Backend/.env`
+- Deploy `Server/` to any Node hosting (Render, Railway, EC2, VPS)
+- Set environment variables from `Server/.env`
 - Start command: `npm start`
 
 ### Frontend
 
-- Deploy `Frontend/` to Vercel/Netlify
+- Deploy `Client/` to Vercel/Netlify
 - Set `VITE_API_URL` to your deployed backend URL
 - Build command: `npm run build`
 
